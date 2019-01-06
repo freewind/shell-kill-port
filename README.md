@@ -1,8 +1,10 @@
-TypeScript Hello World Demo
+TypeScript Shell Demo
 ===========================
+
+Use typescript as shell script.
 
 ```
 npm install
-npm run demo
+./hello.ts
 ```
 
