@@ -1,6 +1,16 @@
 {
+  "scripts": {
+    "run": "ts-node ./entry.ts",
+    "build": "webpack"
+  },
   "devDependencies": {
+    "@types/node": "8.10.49",
+    "@types/shelljs": "0.8.0",
+    "@types/webpack": "4.4.34",
     "ts-node": "7.0.1",
     "typescript": "3.2.2"
+  },
+  "dependencies": {
+    "shelljs": "0.8.3"
   }
 }
