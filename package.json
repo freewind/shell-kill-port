@@ -1,14 +1,18 @@
 {
   "scripts": {
     "run": "ts-node ./entry.ts",
-    "build": "webpack"
+    "build": "webpack",
+    "postbuild": "chmod +x ./dist/bundle.js && cp -rf ./dist/bundle.js ~/bin/hello"
   },
   "devDependencies": {
     "@types/node": "8.10.49",
     "@types/shelljs": "0.8.0",
     "@types/webpack": "4.4.34",
+    "ts-loader": "6.0.4",
     "ts-node": "7.0.1",
-    "typescript": "3.2.2"
+    "typescript": "3.2.2",
+    "webpack": "4.8.3",
+    "webpack-cli": "3.3.5"
   },
   "dependencies": {
     "shelljs": "0.8.3"

@@ -1,8 +1,9 @@
-import {Configuration} from 'webpack';
+import webpack, {Configuration} from 'webpack';
 import path from 'path';
 
 const config: Configuration = {
   mode: "development",
+  target: "node",
   entry: './entry.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -18,6 +19,9 @@ const config: Configuration = {
       exclude: /node_modules/
     }]
   },
+  plugins: [
+    new webpack.BannerPlugin({banner: "#!/usr/bin/env node", raw: true}),
+  ]
 }
 
 export default config;
